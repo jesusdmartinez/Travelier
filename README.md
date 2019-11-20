@@ -2,4 +2,4 @@
 Fundamental Routes, HTML, CSS, JS for starting a travel website.
 
 # Purpose
-Personalized travel.  Starting with Brazil.
+Personalized travel.  Focused on Latam, starting with Brazil.
