@@ -8,7 +8,7 @@ user_question_answer = Table('user_question_answer', db.Model.metadata,
                              db.Column('question_id', db.Integer, db.ForeignKey('questions.question_id', ondelete='CASCADE')),
                              db.Column('answer_id', db.Integer, db.ForeignKey('answers.answer_id', ondelete='CASCADE')))
 
-
+# Check many to many relationships?
 class User(db.Model):
     __tablename__ = 'users'
     user_id = db.Column(db.Integer,
@@ -52,6 +52,7 @@ class Questions(db.Model):
 
 
 # check delete method with Yuri
+# Check many to many relationships?
 class Answers(db.Model):
     __tablename__ = 'answers'
     answer_id = db.Column(db.Integer, autoincrement=True, primary_key=True, nullable=False)
