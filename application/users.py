@@ -15,9 +15,9 @@ def create_user():
     return jsonify(), 200
 
 
-@NewUsersApi.route('<username>', methods=['GET'])
-def get_user(username):
-    username = User.query.filter(User.first_name == username).first()
+@NewUsersApi.route('<first_name>', methods=['GET'])
+def get_user(first_name):
+    username = User.query.filter(User.first_name == first_name).first()
     if username is None:
         return 'user not found', 404
     return jsonify(username.retrieve_users()), 200
