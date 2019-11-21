@@ -12,9 +12,11 @@ app.register_blueprint(NewUsersApi, url_prefix='/')
 app.register_blueprint(NewQuestionApi, url_prefix='/question')
 
 
+
 @app.route('/')
 def home():
     return render_template('home.html')
+
 
 
 @app.route('/question', methods=['POST'])
@@ -26,6 +28,7 @@ def create_question():
     db.session.add(new_question)
     db.session.commit()
     return jsonify(), 200
+
 
 
 @app.route('/answer', methods=['POST'])
