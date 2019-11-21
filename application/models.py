@@ -1,14 +1,15 @@
 from . import db
 from datetime import datetime
-from sqlalchemy import Table, Integer, String, ForeignKey, Column, ForeignKeyConstraint
+from sqlalchemy import Table, Integer, String, ForeignKey, Column, ForeignKeyConstraint, VARCHAR
 
 
+# Do I need to make an association table here?  Could simply use a normal class, and incorporate staticmethods to create, too?
 user_question_answer = Table('user_question_answer', db.Model.metadata,
                              db.Column('user_id', db.Integer, db.ForeignKey('users.user_id', ondelete='CASCADE')),
                              db.Column('question_id', db.Integer, db.ForeignKey('questions_answers.question_id', ondelete='CASCADE')),
                              db.Column('answer_id', db.Integer, db.ForeignKey('questions_answers.answer_id', ondelete='CASCADE')))
 
-# Check many to many relationships?
+
 class User(db.Model):
     __tablename__ = 'users'
     user_id = db.Column(db.Integer,
@@ -16,9 +17,8 @@ class User(db.Model):
     first_name = db.Column(db.String(50), unique=False, nullable=False)
     last_name = db.Column(db.String(50), unique=False, nullable=False)
     email = db.Column(db.String(50), unique=True, nullable=False)
-    phone_number = db.Column(db.Char(11), unique=True, nullable=False)
+    phone_number = db.Column(db.VARCHAR(11), unique=True, nullable=False)
     signup_date = db.Column(db.DateTime, unique=False, nullable=False, default=datetime.utcnow)
-    # questions = db.relationship('Questions', secondary=user_question_answer, back_populates="users")
 
 
     @staticmethod
@@ -51,13 +51,10 @@ class Questions(db.Model):
        }
 
 
-# check delete method with Yuri
-# Check many to many relationships?
+
 class Answers(db.Model):
     __tablename__ = 'answers'
     answer_id = db.Column(db.Integer, autoincrement=True, primary_key=True, nullable=False)
-    question_id = db.Column(db.Integer, db.ForeignKey('questions.question_id',
-                        ondelete="SET NULL"))
     answer = db.Column(db.String(250), nullable=False, unique=False)
     # user = db.relationship('User', foreign_keys=user_id)
 
@@ -74,6 +71,7 @@ class Answers(db.Model):
        }
 
 
+# Do I need the table below AND the association table at the top of code?  It seems repetitive.
 class QuestionsAnswers(db.Model):
     __tablename__ = 'questions_answers'
     questions_answers_id = db.Column(db.Integer, primary_key=True, nullable=False, autoincrement=True)
