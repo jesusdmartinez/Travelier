@@ -5,8 +5,8 @@ from sqlalchemy import Table, Integer, String, ForeignKey, Column, ForeignKeyCon
 
 user_question_answer = Table('user_question_answer', db.Model.metadata,
                              db.Column('user_id', db.Integer, db.ForeignKey('users.user_id', ondelete='CASCADE')),
-                             db.Column('question_id', db.Integer, db.ForeignKey('questions.question_id', ondelete='CASCADE')),
-                             db.Column('answer_id', db.Integer, db.ForeignKey('answers.answer_id', ondelete='CASCADE')))
+                             db.Column('question_id', db.Integer, db.ForeignKey('questions_answers.question_id', ondelete='CASCADE')),
+                             db.Column('answer_id', db.Integer, db.ForeignKey('questions_answers.answer_id', ondelete='CASCADE')))
 
 # Check many to many relationships?
 class User(db.Model):
@@ -16,7 +16,7 @@ class User(db.Model):
     first_name = db.Column(db.String(50), unique=False, nullable=False)
     last_name = db.Column(db.String(50), unique=False, nullable=False)
     email = db.Column(db.String(50), unique=True, nullable=False)
-    phone_number = db.Column(db.Integer, unique=True, nullable=False)
+    phone_number = db.Column(db.Char(11), unique=True, nullable=False)
     signup_date = db.Column(db.DateTime, unique=False, nullable=False, default=datetime.utcnow)
     # questions = db.relationship('Questions', secondary=user_question_answer, back_populates="users")
 
@@ -71,4 +71,24 @@ class Answers(db.Model):
             'question_id': self.question_id,
             'answer': self.answer,
             'user': self.users.retrieve_users()
+       }
+
+
+class QuestionsAnswers(db.Model):
+    __tablename__ = 'questions_answers'
+    questions_answers_id = db.Column(db.Integer, primary_key=True, nullable=False, autoincrement=True)
+    question_id = db.Column(db.Integer, db.ForeignKey('questions.question_id',
+                                                      ondelete="SET NULL"))
+    answer_id = db.Column(db.Integer, db.ForeignKey('answers.answer_id',
+                                                      ondelete="SET NULL"))
+
+    @staticmethod
+    def create_question_answer(dict):
+        return QuestionsAnswers(question_id=dict['question_id'], answer_id=dict['answer_id'])
+
+    def return_question(self):
+        return {
+            'questions_answers_id': self.questions_answers_id,
+            'question_id': self.question_id,
+            'answer_id': self.answer_id,
        }
