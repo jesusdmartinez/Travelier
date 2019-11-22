@@ -3,13 +3,6 @@ from datetime import datetime
 from sqlalchemy import Table, Integer, String, ForeignKey, Column, ForeignKeyConstraint, VARCHAR
 
 
-# Do I need to make an association table here?  Could simply use a normal class, and incorporate staticmethods to create, too?
-user_question_answer = Table('user_question_answer', db.Model.metadata,
-                             db.Column('user_id', db.Integer, db.ForeignKey('users.user_id', ondelete='CASCADE')),
-                             db.Column('question_id', db.Integer, db.ForeignKey('questions_answers.question_id', ondelete='CASCADE')),
-                             db.Column('answer_id', db.Integer, db.ForeignKey('questions_answers.answer_id', ondelete='CASCADE')))
-
-
 class User(db.Model):
     __tablename__ = 'users'
     user_id = db.Column(db.Integer,
@@ -35,6 +28,7 @@ class User(db.Model):
        }
 
 
+
 class Questions(db.Model):
     __tablename__ = 'questions'
     question_id = db.Column(db.Integer, primary_key=True, nullable=False, autoincrement=True)
@@ -55,38 +49,19 @@ class Questions(db.Model):
 class Answers(db.Model):
     __tablename__ = 'answers'
     answer_id = db.Column(db.Integer, autoincrement=True, primary_key=True, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id', ondelete="SET NULL"))
+    question_id = db.Column(db.Integer, db.ForeignKey('questions.question_id', ondelete="SET NULL"))
     answer = db.Column(db.String(250), nullable=False, unique=False)
-    # user = db.relationship('User', foreign_keys=user_id)
+    answer_date = db.Column(db.DateTime, unique=False, nullable=False, default=datetime.utcnow)
 
     @staticmethod
     def create_answer(dict):
-        return Answers(question_id=dict['question_id'], answer=dict['answer'])
+        return Answers(user_id=dict['user_id'], question_id=dict['question_id'], answer=dict['answer'])
 
     def return_answer(self):
         return {
             'answer_id': self.answer_id,
+            'user_id': self.user_id,
             'question_id': self.question_id,
             'answer': self.answer,
-            'user': self.users.retrieve_users()
-       }
-
-
-# Do I need the table below AND the association table at the top of code?  It seems repetitive.
-class QuestionsAnswers(db.Model):
-    __tablename__ = 'questions_answers'
-    questions_answers_id = db.Column(db.Integer, primary_key=True, nullable=False, autoincrement=True)
-    question_id = db.Column(db.Integer, db.ForeignKey('questions.question_id',
-                                                      ondelete="SET NULL"))
-    answer_id = db.Column(db.Integer, db.ForeignKey('answers.answer_id',
-                                                      ondelete="SET NULL"))
-
-    @staticmethod
-    def create_question_answer(dict):
-        return QuestionsAnswers(question_id=dict['question_id'], answer_id=dict['answer_id'])
-
-    def return_question(self):
-        return {
-            'questions_answers_id': self.questions_answers_id,
-            'question_id': self.question_id,
-            'answer_id': self.answer_id,
        }

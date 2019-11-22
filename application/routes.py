@@ -12,10 +12,22 @@ app.register_blueprint(NewUsersApi, url_prefix='/')
 app.register_blueprint(NewQuestionApi, url_prefix='/question')
 
 
-
+# Home page --> 5 section scrolling site with top portion dedicated to creating a trip
 @app.route('/')
 def home():
     return render_template('home.html')
+
+
+# Get Started Page --> Sheet 1 of questionnaire
+@app.route('/get-started')
+def get_started():
+    return render_template('get-started.html')
+
+
+# Brazil Page --> Page to display different trip options in brazil
+@app.route('/brazil')
+def brazil():
+    return render_template('brazil.html')
 
 
 
