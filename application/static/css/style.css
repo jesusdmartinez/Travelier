@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,600,700,800,900');
+
+/*basic reset*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Barlow';
+  overflow-x:hidden;
+}
+/*form styles*/
+#msform {
+  width: 100%;
+margin: 0;
+  text-align: center;
+  position: relative;
+}
+#msform .travel-step {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 30px 40px 10px;
+  box-sizing: border-box;
+width: 100%;
+    margin: 0 0  50px;
+  /*stacking fieldsets above each other*/
+  position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform .travel-step:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msform input,
+#msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+  width: 100px;
+  background: #15b367;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform .action-button:hover,
+#msform .action-button:active,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #1c1c1c;
+    background: #1c1c1c;
+	outline:none;
+}
+/*headings*/
+.fs-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #15b367;
+  margin-bottom: 10px;
+}
+.fs-subtitle {
+  font-weight: normal;
+  color: #333;
+  font-size: 24px;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 600;
+   text-transform: capitalize;
+   position:relative; z-index: 1;
+}
+h3.fs-subtitle span {
+    font-size: 45px;
+    position: absolute;
+    z-index: -1;
+    color: rgba(21, 179, 103, 0.2);
+    margin-left: -10px;
+    margin-top: -4px;
+}
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+#progressbar li {
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 12.5%;
+  float: left;
+  position: relative;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: auto	;
+  line-height: normal;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+  opacity:0;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 0;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: #15b367;
+  color: white;
+}
+.help-block {
+  font-size: 0.8em;
+  color: #7c7c7c;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+.travel-bg
+{    min-height: 100%;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+    background-attachment: fixed!important;
+}
+.travel1
+{
+	background:#000 url(../img/bg.jpg);
+
+}
+.travel2
+{
+	background:#000 url(../img/bg2.jpg);
+
+}
+.travel3
+{
+	background:#000 url(../img/bg3.jpg);
+
+}
+.travel4
+{
+	background:#000 url(../img/bg4.jpg);
+
+}
+.travel5
+{
+	background:#000 url(../img/bg5.jpg);
+
+}
+.travel6
+{
+	background:#000 url(../img/bg6.jpg);
+
+}
+.travel7
+{
+	background:#000 url(../img/bg7.jpg);
+
+}
+.travel8
+{
+	background:#000 url(../img/bg8.jpg);
+
+}
+h2.heading {
+      color: #fff;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.questions-travel {
+    margin-bottom: 35px;
+}
+.questions-travel .travel-btn span.title {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 0px;
+	    min-height: 45px;
+    display: flex;
+    align-items: center;
+	justify-content:Center;
+}
+.questions-travel .travel-btn {
+    width: 100%;    padding: 0px 10px;
+    line-height: normal;
+    background: #fff;
+    border: 2px solid  transparent;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+    min-height: 140px;    margin-bottom: 25px;
+	text-transform:capitalize;
+}
+.questions-travel .travel-btn:focus
+{
+ outline:none;
+}
+.questions-travel .travel-btn:hover , .questions-travel .travel-btn.active
+{
+	 border: 2px solid #15b367;
+}
+.questions-travel {
+    margin-bottom: 10px;
+    margin-top: 35px;
+}
+@media (max-width: 767px)
+{
+
+footer.footer {
+     position: static!important;
+}#msform .travel-step {
+    position: static!important;
+}section.traveller {
+
+    padding: 20px;
+}
+}
+
+@media (max-width: 991px)
+{
+header ul.navbar-nav {
+    background: #1c1c1c;
+    padding: 15px;
+}
+
+}
+
+@media (min-width: 992px)
+{
+.col-llg-2 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: .75rem;
+    padding-left: .75rem;
+}
+}section.traveller {
+    margin-top: 30px;
+}
+header nav.navbar
+{background: rgba(0, 0, 0, 0.07);
+	width:100%
+}
+header nav.navbar li.nav-item > a.nav-link {
+    color: #fff; padding: .25rem 1rem;
+}
+header  .navbar-nav .active>.nav-link , header  .navbar-nav .nav-link.active,  header  .navbar-nav .nav-link.show ,  header  .navbar-nav .show>.nav-link {
+   color: #ffffff!important;
+    background: #15b367!important;
+}header  .navbar-nav .nav-link:focus, header  .navbar-nav .nav-link:hover {
+    color: #ffffff!important;
+    background: #15b367!important;
+}
+header li.nav-item.call a {
+    border-radius: 0;
+    background: transparent!important;
+    color: #fff!important;
+    padding: 6px 12px!important;
+    border: 1px solid #fff;    font-size: 14px;
+}
+header li.nav-item.call a:hover {
+	color:#fff!important;background: transparent!important;
+}
+header a.navbar-brand img {
+    height: 40px;
+}header a.navbar-brand {
+    margin-right: 3rem;
+}
+header {
+
+    min-height: 60px;
+}
+.travel-btn .travel-icon img {
+    width: 60px;
+}
+
+footer.footer {
+     position: absolute;
+    bottom: 0;
+    width: 100%;
+    /*height:60px;
+    line-height:60px;*/
+    color: #fff;
+    border-top: 1px solid rgba(164, 164, 164, 0.21);
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}button.navbar-toggler span.navbar-toggler-icon {
+    display: block;
+    width: 22px;margin-bottom: 4px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #ffffff;
+}
+button.navbar-toggler {
+    border: 1px solid #fff;padding-top: 8px!important;
+}
+@media only screen and (min-width: 992px) and  (max-width: 1024px)
+{
+	header a.navbar-brand img {
+    height: 30px;
+}
+}
