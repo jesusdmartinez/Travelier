@@ -20,6 +20,7 @@ Take people on once-in-a-lifetime journeys
 - Eco focused
 - Local experiences
 - Travel with a purpose
+- In market support, for free!
 
 # Tech Specs
 - Webpage HTML, CSS, JS (Bootstrap, JQuery)
