@@ -10,6 +10,7 @@ Take people on once-in-a-lifetime journeys
 - Secure:  we are by your side 24/7
 - Convenient:  we do all the work from beginning to end
 - Simple:  use our online tool
+- We're in-market experts!
 
 # How?
 - Superior in-market exploring
