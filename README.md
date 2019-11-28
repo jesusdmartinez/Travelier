@@ -11,6 +11,8 @@ Take people on once-in-a-lifetime journeys
 - Convenient:  we do all the work from beginning to end
 - Simple:  use our online tool
 - We're in-market experts!
+- Inmarket application
+- Custom tours operated by us.  Travelier Originals.
 
 # How?
 - Superior in-market exploring
