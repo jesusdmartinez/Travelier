@@ -1,5 +1,5 @@
 # Travelier
-End to end personalized travel.  Focused on Latam, starting with Brazil.
+End to end personalized travel.  Focused on Latam, starting with Brazil.  Plane tickets, airport pickup, hotels, intra-country travel, tours, experiences, dinner, etc..
 
 # Purpose // Mission
 Take people on once-in-a-lifetime journeys
