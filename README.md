@@ -29,3 +29,9 @@ Take people on once-in-a-lifetime journeys
 - Webpage HTML, CSS, JS (Bootstrap, JQuery)
 - FLASK routes
 - MySql Database Schema
+
+# Locations
+- Brazil
+- Colombia
+- Mexico
+- Chile
