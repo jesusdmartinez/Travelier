@@ -24,6 +24,9 @@ Take people on once-in-a-lifetime journeys
 - Local experiences
 - Travel with a purpose
 - In market support, for free!
+- Ayahuasca
+- Spirirtuality
+- Active
 
 # Tech Specs
 - Webpage HTML, CSS, JS (Bootstrap, JQuery)
