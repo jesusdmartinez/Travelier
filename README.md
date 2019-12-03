@@ -38,3 +38,6 @@ Take people on once-in-a-lifetime journeys
 - Colombia
 - Mexico
 - Chile
+- Peru
+- Argentina
+- Costa Rica
