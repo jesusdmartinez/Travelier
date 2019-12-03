@@ -5,6 +5,7 @@ from .users import NewUsersApi
 from .questions import NewQuestionApi
 
 from .models import Questions, User, Answers
+from .forms import LoginForm
 
 from . import db
 
@@ -17,8 +18,26 @@ app.register_blueprint(NewQuestionApi, url_prefix='/question')
 @app.route('/home')
 def home():
     user = {'username': 'Jesus'}
-    return render_template('home.html', title='Home', user=user)
+    posts = [
+        {
+            'author': {'username': 'Jonah'},
+            'body': 'I love Brazilian Women'
+        },
+        {
+            'author': {'username': 'Patrick'},
+            'body': 'I love Taiwan'
+        },
+        {
+            'author': {'username': 'Jesus'},
+            'body': 'Lets kitesurf in Mexico, G'
+        }
+    ]
+    return render_template('home.html', title='Home', user=user, posts=posts)
 
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html', title='Sign In', form=form)
 
 
 
