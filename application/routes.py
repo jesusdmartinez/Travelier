@@ -14,8 +14,12 @@ app.register_blueprint(NewQuestionApi, url_prefix='/question')
 
 # Home page --> 5 section scrolling site with top portion dedicated to creating a trip
 @app.route('/')
+@app.route('/home')
 def home():
-    return render_template('home.html')
+    user = {'username': 'Jesus'}
+    return render_template('home.html', title='Home', user=user)
+
+
 
 
 # Get Started Page --> Sheet 1 of questionnaire
