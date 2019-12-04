@@ -10,8 +10,8 @@
         <div>
             Microblog:
             <a href="/">Home</a>
-            <a href="/get-started">Get Started</a>
-            <a href="/login">Login</a>
+            <a href="{{ url_for('get_started') }}">Get Started</a>
+            <a href="{{ url_for('login') }}">Login</a>
         </div>
         <hr>
         {% with messages = get_flashed_messages() %}
