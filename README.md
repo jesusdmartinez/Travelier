@@ -2,7 +2,9 @@
 End to end personalized travel.  Focused on Latam, starting with Brazil.  Plane tickets, airport pickup, hotels, intra-country travel, tours, experiences, dinner, etc..
 
 # Purpose // Mission
-Take people on once-in-a-lifetime journeys
+Take people on once-in-a-lifetime journeys.
+Share local experiences.
+
 
 # Why?
 - Unique:  our experiences are one-of-a-kind
