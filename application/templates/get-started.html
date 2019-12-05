@@ -1,53 +1,59 @@
 <!doctype html>
 <html lang="en">
   <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <title>Index Page</title>
+      <title>Discover Brazil</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="static/css/fontawesome.css">
     <link rel="stylesheet" href="static/css/style.css">
-
+    <link rel="stylesheet" href="static/css/slick.css">
+    <link rel="stylesheet" href="static/css/flags.css">
+<link href="static/css/select2.min.css" rel="stylesheet"/>
+<style>
+.form-group {
+    margin-bottom: 25px;
+}
+</style>
   </head>
-  <body class="travel1 travel-bg">
+  <body class="travel-bg">
 <header>
   <div class="container">
 		   <div class="row">
 		     <nav class="navbar navbar-expand-lg fixed-top" >
-  <a class="navbar-brand" href="#">
-   <img src="img/logo.png"/>
 
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <!--button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     <span class="navbar-toggler-icon"></span>
     <span class="navbar-toggler-icon"></span>
-  </button>
+  </button-->
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Tours <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Hotels</a>
+      <li class="nav-item lang">
+       <div class="selectpicker"
+                         data-input-name="country3"
+                         data-selected-country="BR"
+                         data-button-size="btn-lg"
+                         data-button-type="btn-warning"
+                         data-scrollable="true"
+                         data-scrollable-height="250px"
+                         data-countries='{"BR": "Brazil"}'>
+                    </div>
       </li>
 
-       <li class="nav-item">
-        <a class="nav-link" href="#">How IT Works</a>
-      </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
-      </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="#">BrazilBlog</a>
-      </li>
-	   <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
     </ul>
+	<ul class="navbar-nav mr-auto ml-auto">
+	<li class="logo">
+	 <a class="navbar-brand" href="#">
+         <img src="static/img/logo.png"/>
+      </a>
+	  </li>
+	</ul>
        <ul class="navbar-nav ml-auto">
-     <li class="nav-item call">
-        <a class="nav-link" href="#"><i class="fa fa-phone"></i> +1-206-963-2639	</a>
+     <li class="nav-item">
+        <a class="nav-link" href="tel: +1-206-963-2639">Lets’ Chat</a>
       </li>
 	  </ul>
 
@@ -60,312 +66,970 @@
 	   <div class="container">
 		   <div class="row">
 		        <!-- multistep form -->
-<form id="msform" class="travelform" action="javascript:void(0)">
-	<h2 class="heading">Travelier: <strong> Trip Planner</strong> (Questions and Answers)</h2>
+<div id="msform" class="travelform" action="javascript:void(0)">
+	<!--h2 class="heading">Travelier: <strong> Trip Planner</strong> (Questions and Answers)</h2-->
   <!-- progressbar -->
-	<ul id="progressbar">
-		<li class="active"></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
+
+
+
 	<!-- progressbar -->
+	<div class="inline slider single-item">
 	<div class="travel-step">
-		<h3 class="fs-title">Question 1</h3>
-		<h3 class="fs-subtitle"><span>Q</span>How are you traveling?</h3>
+	<div class="headings-top">
+		   <h3>Customized experience. Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
+		<!--h3 class="fs-title">Question 1</h3-->
+		<h3 class="fs-subtitle"><!--span>Q</span-->How are you traveling?</h3>
         <div class="questions-travel">
 		      <div class="row">
-				 	  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button type="button" href="javascript:void(0)" class="travel-btn btn1">
-						   <span class="travel-icon"><img  src="img/solo.png"></span>
-						   <span class="title">Solo</span>
-						</button>
+				 	  <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                         <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="static/img/solo1.png"/>
+
+                          </div>
+				  <h3 class="title">Solo</h3>
 				  </div>
-				 	  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn1">
-						   <span class="travel-icon"><img  src="img/couple.png"></span>
-						   <span class="title">As a couple</span>
-						</button>
+				 	  <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+<div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="static/img/couple1.png"/>
+
+                          </div>
+					   <h3 class="title">Couple</h3>
 				  </div>
-				 	  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn1">
-						   <span class="travel-icon"><img  src="img/family.png"></span>
-						   <span class="title">With family</span>
-						</button>
+				 	  <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+<div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="static/img/friends1.png"/>
+
+                          </div>
+					  <h3 class="title">Friends</h3>
 				  </div>
-					  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn1">
-						   <span class="travel-icon"><img  src="img/friendship.png"></span>
-						   <span class="title">With friends</span>
-						</button>
+					  <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+<div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="static/img/family1.png"/>
+
+                          </div>
+					 <h3 class="title">Family</h3>
 				  </div>
 			  </div>
 		</div>
-		<input type="button" name="next" class="next action-button next1" value="Next" />
+		<div class="footer-btns">
+		<input type="button" id="next-btn" name="next" class="next action-button  actionbtn next1" value="Next" data-role="none" class="" aria-label="Next" role="button" />
+	    </div>
 	</div>
 	<div class="travel-step">
-		<h2 class="fs-title">Question 2</h2>
-		<h3 class="fs-subtitle"><span>Q</span>How long?</h3>
+	<div class="headings-top">
+		   <h3>Customized experience. Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
+		<!--h2 class="fs-title">Question 2</h2-->
+		<h3 class="fs-subtitle"><!--span>Q</span-->What type of experience would you like?
+</h3>
+          <div class="questions-travel">
+            <div class="row">
+				   <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+ <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/beach1.png"/>
+								  <h3 class="title">Beaches and Sun</h3>
+                          </div>
+
+				  </div>
+				   <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+ <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/nature1.png"/>
+								  <h3 class="title">Nature and Wildlife</h3>
+                          </div>
+
+				  </div>
+				  <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+ <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/culture1.png"/>
+								  <h3 class="title">Culture/UNESCO</h3>
+                          </div>
+
+				  </div>
+				    <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                      <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/sports1.png"/>
+								  <h3 class="title">Sports and Recreation</h3>
+                          </div>
+
+				  </div>
+
+			  </div>
+			</div>
+		<div class="footer-btns">
+		<input type="button" name="previous" class="previous actionbtn action-button prev2" value="Previous" />
+		<input type="button" data-toggle="modal" data-target="#modal1" name="next" class=" action-button next2" value="Next" />
+	</div>
+	</div>
+	<!--div class="travel-step">
+		<div class="headings-top">
+		   <h3>Customized <strong>experience.</strong>  Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
 		<div class="questions-travel">
             <div class="row">
-				  	  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button type="button" href="javascript:void(0)" class="travel-btn btn2">
-						   <span class="travel-icon"><img src="img/calendar.png"></span>
-						   <span class="title">1 week</span>
-						</button>
+				  	  <div class="col-lg-6 col-md-6 col-sm-6">
+                           <div class="travel-map">
+					   <img  src="img/gmap.png"/>
 				  </div>
-					  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn2">
-						   <span class="travel-icon"><img  src="img/calendar.png"></span>
-						   <span class="title">2 weeks</span>
-						</button>
 				  </div>
-				 	  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn2">
-						   <span class="travel-icon"><img  src="img/calendar.png"></span>
-						   <span class="title">3-5 weeks</span>
-						</button>
+					  <div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="content-map text-center">
+<img src="img/other1.png"/>
+							<p>
+
+												Did you know the Amazon produces more than 20% of the world’s oxygen?
+							</p>
 				  </div>
-					  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn2">
-						   <span class="travel-icon"><img  src="img/calendar.png"></span>
-						   <span class="title">5+ weeks</span>
-						</button>
 				  </div>
+
 			  </div>
 			</div>
-		<input type="button" name="previous" class="previous action-button prev2" value="Previous" />
-		<input type="button" name="next" class="next action-button next2" value="Next" />
-	</div>
-	<div class="travel-step">
-		<h2 class="fs-title">Question 3</h2>
-		<h3 class="fs-subtitle"><span>Q</span>When would you like to go?</h3>
-<div class="questions-travel">
-            <div class="row">
-				 	  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button type="button" href="javascript:void(0)" class="travel-btn btn3">
-						   <span class="travel-icon"><img  src="img/calendar.png"></span>
-						   <span class="title">Within 4 weeks</span>
-						</button>
-				  </div>
-					  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn3">
-						   <span class="travel-icon"><img  src="img/calendar.png"></span>
-						   <span class="title">1-4 months</span>
-						</button>
-				  </div>
-					  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn3">
-						   <span class="travel-icon"><img  src="img/calendar.png"></span>
-						   <span class="title">4+ months</span>
-						</button>
-				  </div>
-					  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn3">
-						   <span class="travel-icon"><img  src="img/not-sure.png"></span>
-						   <span class="title">Not Sure</span>
-						</button>
-				  </div>
-			  </div>
-			</div>
+
 		<input type="button" name="previous" class="previous action-button prev3" value="Previous" />
-		<input type="button" name="next" class="next action-button next3" value="Next" />
-	</div>
+		<input type="button" name="next" class="next noactionbtn action-button next3" value="Next" />
+	</div-->
 	<div class="travel-step">
-		<h2 class="fs-title">Question 4</h2>
-		<h3 class="fs-subtitle"><span>Q</span>What type of experience?</h3>
-          <div class="questions-travel">
+	<div class="headings-top">
+		   <h3>Customized experience.  Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
+		<!--h2 class="fs-title">Question 4</h2-->
+		<h3 class="fs-subtitle"><!--span>Q</span--->Have you purchased your flights?</h3>
+<div class="questions-travel">
             <div class="row justify-content-center">
-				   <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button type="button" href="javascript:void(0)" class="travel-btn btn4">
-						   <span class="travel-icon"><img  src="img/beach.png"></span>
-						   <span class="title">Beaches and Sun</span>
-						</button>
+				 	  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                     <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/yes.jpg"/>
+								  <h3 class="title">Yes</h3>
+                          </div>
 				  </div>
-				   <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn4">
-						   <span class="travel-icon"><img  src="img/nature.png"></span>
-						   <span class="title">Nature and Wildlife</span>
-						</button>
+				 	  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+ <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/no.jpg"/>
+								  <h3 class="title">No</h3>
+                          </div>
 				  </div>
-				  <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn4">
-						   <span class="travel-icon"><img  src="img/culture.png"></span>
-						   <span class="title">Culture/UNESCO</span>
-						</button>
-				  </div>
-				    <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn4">
-						   <span class="travel-icon"><img  src="img/sports.png"></span>
-						   <span class="title">Sports and Recreation</span>
-						</button>
-				  </div>
-				    <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn4">
-						   <span class="travel-icon"><img  src="img/more.png"></span>
-						   <span class="title">Tell us more!</span>
-						</button>
-				  </div>
-			  </div>
+
 			</div>
-		<input type="button" name="previous" class="previous action-button prev4" value="Previous" />
-		<input type="button" name="next" class="next action-button next4" value="Next" />
+			</div>
+			<div class="footer-btns">
+		<input type="button" name="previous" class="previous action-button prev3" value="Previous" />
+		<input type="button" name="next" class="nexts action-button next3" value="Next" />
+</div>
 </div>
 <div class="travel-step">
-		<h2 class="fs-title">Question 5</h2>
-		<h3 class="fs-subtitle"><span>Q</span>Any must see locations in Brazil?</h3>
+<div class="headings-top">
+		   <h3>Customized experience. Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
+		<!--h2 class="fs-title">Question 5</h2-->
+		<h3 class="fs-subtitle"><!--span>Q</span-->Great.  Tell us your dates!</h3>
   <div class="questions-travel">
-            <div class="row justify-content-center">
-				  <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button type="button" href="javascript:void(0)" class="travel-btn btn5">
-						   <span class="travel-icon"><img  src="img/location.png"></span>
-						   <span class="title">Rio de Janiero</span>
-						</button>
+            <!--div class="row justify-content-center"-->
+
+			    <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+            <div class="row">
+			  <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+			     <div class="form-group mar-mob-0">
+				     <label class="float-left">Arrival in Brazil:</label>
+					 <div class="input-group">
+					   <input type="text" class="form-control datepicker"/>
+
+					 </div>
+				 </div>
+			  </div>
+			  <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+			     <div class="form-group">
+				      <label class="float-left"></label>
+					 <div class="input-group">
+					   <select  class="form-control select2 ">
+					       <option>Select</option>
+					      <option>Rio (RIO)</option>
+					       <option>Sao Paulo (GRU)</option>
+					       <option>Other</option>
+					       <option>Not Yet Determined</option>
+					   </select>
+
+					 </div>
+				 </div>
+				 </div>
+				  <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+			     <div class="form-group mar-mob-0">
+				     <label class="float-left">Departure From Brazil:</label>
+					 <div class="input-group">
+					  <input type="text" class="form-control datepicker"/>
+
+					 </div>
+				 </div>
+			  </div>
+			  <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+			     <div class="form-group">
+				     <label class="float-left"></label>
+					 <div class="input-group">
+					   <select  class="form-control select2 ">
+					       <option>Select</option>
+					       <option>Rio (RIO)</option>
+					       <option>Sao Paulo (GRU)</option>
+					       <option>Other</option>
+					       <option>Not Yet Determined</option>
+					   </select>
+
+					 </div>
+				 </div>
+				 </div>
+				 </div>
+			  </div>
+
+			</div>
+			<div class="footer-btns">
+		<input type="button" name="previous" class="previouss action-button prev4" value="Previous" />
+		<input type="button" name="next" class="next action-button next4" value="Next" />
+	</div>
+	</div>
+	<div class="travel-step">
+	<div class="headings-top">
+		   <h3>Customized experience. Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
+		<!--h2 class="fs-title">Question 6</h2-->
+		<h3 class="fs-subtitle"><!--span>Q</span-->When would you like to go?</h3>
+			<div class="questions-travel">
+            <div class="row">
+				 	  <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                      <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/1month.jpg"/>
+								  <h3 class="title">Within 1 Month</h3>
+                          </div>
 				  </div>
-				  <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn5">
-						   <span class="travel-icon"><img  src="img/location.png"></span>
-						   <span class="title">Bahia</span>
-						</button>
+					  <div class="col-lg-3 col-md-6 col-sm-6  col-6">
+                         <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/1-4month.jpg"/>
+								  <h3 class="title">1-4 months</h3>
+                          </div>
 				  </div>
-				  <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn5">
-						   <span class="travel-icon"><img  src="img/location.png"></span>
-						   <span class="title">Jericoacoara</span>
-						</button>
+					  <div class="col-lg-3 col-md-6 col-sm-6  col-6">
+                         <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/4+month.jpg"/>
+								  <h3 class="title">4+ months</h3>
+                          </div>
 				  </div>
-				   <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn5">
-						   <span class="travel-icon"><img  src="img/location.png"></span>
-						   <span class="title">Morro Sao Paulo</span>
-						</button>
-				  </div>
-				   <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn5">
-						   <span class="travel-icon"><img  src="img/other.png"></span>
-						   <span class="title">Other</span>
-						</button>
+					  <div class="col-lg-3 col-md-6 col-sm-6  col-6">
+ <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/notsure.jpg"/>
+								  <h3 class="title">Not Sure</h3>
+                          </div>
 				  </div>
 			  </div>
 			</div>
+		<div class="footer-btns">
 		<input type="button" name="previous" class="previous action-button prev5" value="Previous" />
-		<input type="button" name="next" class="next action-button next5" value="Next" />
+		<input type="button" name="next" class="next action-button next5"  value="Next" />
+	</div>
 	</div>
 	<div class="travel-step">
-		<h2 class="fs-title">Question 6</h2>
-		<h3 class="fs-subtitle"><span>Q</span>What type of hotels do you prefer?</h3>
-<div class="questions-travel">
-            <div class="row justify-content-center">
-				   <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button type="button" href="javascript:void(0)" class="travel-btn btn6">
-						   <span class="travel-icon"><img  src="img/hotel.png"></span>
-						   <span class="title">Chic/Boutique</span>
-						</button>
+	<div class="headings-top">
+		   <h3>Customized experience. Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
+		<!--h2 class="fs-title">Question 7</h2-->
+
+		<h3 class="fs-subtitle"><!--span>Q</span-->How long are you thinking?</h3>
+			<div class="questions-travel">
+            <div class="row">
+				 	  <div class="col-lg-3 col-md-6 col-sm-6  col-6">
+                      <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/1week.jpg"/>
+								  <h3 class="title">1 Week</h3>
+                          </div>
 				  </div>
-					   <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn6">
-						   <span class="travel-icon"><img  src="img/hotel.png"></span>
-						   <span class="title">Cozy Bed & Breakfast</span>
-						</button>
+					  <div class="col-lg-3 col-md-6 col-sm-6  col-6">
+                         <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/2week.jpg"/>
+								  <h3 class="title">2 Weeks</h3>
+                          </div>
 				  </div>
-					   <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn6">
-						   <span class="travel-icon"><img  src="img/hotel.png"></span>
-						   <span class="title">Upscale Resorts</span>
-						</button>
+					  <div class="col-lg-3 col-md-6 col-sm-6  col-6">
+                         <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/3-4week.jpg"/>
+								  <h3 class="title">3-4 Weeks</h3>
+                          </div>
 				  </div>
-					   <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn6">
-						   <span class="travel-icon"><img  src="img/hotel.png"></span>
-						   <span class="title">Luxurious Private House</span>
-						</button>
-				  </div>
-				     <div class="col-llg-2 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn6">
-						   <span class="travel-icon"><img  src="img/hotel.png"></span>
-						   <span class="title">Nature conscious eco-lodge</span>
-						</button>
+					  <div class="col-lg-3 col-md-6 col-sm-6  col-6">
+                   <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/4+week.jpg"/>
+								  <h3 class="title">4+ Weeks</h3>
+                          </div>
 				  </div>
 			  </div>
 			</div>
+<div class="footer-btns">
 		<input type="button" name="previous" class="previous action-button prev6" value="Previous" />
-		<input type="button" name="next" class="next action-button next6"  value="Next" />
-	</div>
-	<div class="travel-step">
-		<h2 class="fs-title">Question 7</h2>
-		<h3 class="fs-subtitle"><span>Q</span>Would you like us to arrange your international flights?</h3>
-<div class="questions-travel">
-            <div class="row justify-content-center">
-				 	  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button type="button" href="javascript:void(0)" class="travel-btn btn7">
-						   <span class="travel-icon"><img  src="img/yes.png"></span>
-						   <span class="title">Yes</span>
-						</button>
-				  </div>
-				 	  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn7">
-						   <span class="travel-icon"><img  src="img/no.png"></span>
-						   <span class="title">No</span>
-						</button>
-				  </div>
-
-			</div>
-			</div>
-		<input type="button" name="previous" class="previous action-button prev7" value="Previous" />
-		<input type="button" name="next" class="next action-button next7" value="Next" />
+		<input type="button" name="next"  data-toggle="modal" data-target="#modal2" class=" action-button next6" value="Next" />
 
 	</div>
-	<div class="travel-step">
-		<h2 class="fs-title">Question 8</h2>
-	    <h3 class="fs-subtitle"><span>Q</span>What pace are you looking for your trip?</h3>
+	</div>
+	<!---div class="travel-step">
+		<div class="headings-top">
+		   <h3>Customized <strong>experience.</strong>  Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
 		<div class="questions-travel">
-               <div class="row justify-content-center">
-				  	  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button type="button" href="javascript:void(0)" class="travel-btn btn8">
-						   <span class="travel-icon"><img  src="img/trip.png"></span>
-						   <span class="title">Fast Pace</span>
-						</button>
+            <div class="row">
+				  	  <div class="col-lg-6 col-md-6 col-sm-6">
+                           <div class="travel-map">
+					   <img  src="img/gmap.png"/>
 				  </div>
-				 	  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn8">
-						   <span class="travel-icon"><img  src="img/trip.png"></span>
-						   <span class="title">Moderate Pace</span>
-						</button>
 				  </div>
-					  <div class="col-lg-3 col-md-6 col-sm-6">
-					    <button href="javascript:void(0)"  class="travel-btn btn8">
-						   <span class="travel-icon"><img  src="img/trip.png"></span>
-						   <span class="title">Slow Pace</span>
-						</button>
+					  <div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="content-map text-center">
+<img src="img/other1.png"/>
+							<p>
+
+												Did you know Brazil is the 5th largest country in the world with over 210 million inhabitants?
+							</p>
 				  </div>
+				  </div>
+
+			  </div>
 			</div>
-			</div>
+
 		<input type="button" name="previous" class="previous action-button prev8" value="Previous" />
-		<input type="submit" name="submit" class="submit action-button next8" value="Submit" />
+		<input type="button" name="next" class="next action-button next8" value="Next" />
+	</div--->
+	<div class="travel-step">
+	<div class="headings-top">
+		   <h3>Customized experience.  Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
+		<!--h2 class="fs-title">Question 8</h2-->
+		<h3 class="fs-subtitle"><!--span>Q</span-->Any must see locations in Brazil?</h3>
+              <div class="questions-travel">
+            <div class="row">
+				   <div class="col-lg-3  col-md-6 col-sm-6 col-6">
+				    <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/location1.png"/>
+								  <h3 class="title">Rio de Janiero</h3>
+                          </div>
+				  </div>
+				  <div class="col-lg-3  col-md-6 col-sm-6  col-6">
+                        <div class="travel-img">
+							 <div class="radio">
+							   <input type="radio"  name="radio"/>
+							   <img class="img-tick imgtick" src="static/img/tick.png"/>
+							   <img class="img-tick" src="img/notick.png"/>
+							 </div>
+                                 <img  src="img/location2.png"/>
+								  <h3 class="title">Bahia</h3>
+                          </div>
+				  </div>
+					   <div class="col-lg-3  col-md-6 col-sm-6  col-6">
+                            <div class="travel-img">
+							 <div class="radio">
+							   <input type="radio"  name="radio"/>
+							   <img class="img-tick imgtick" src="static/img/tick.png"/>
+							   <img class="img-tick" src="img/notick.png"/>
+							 </div>
+                                 <img  src="img/location3.png"/>
+								  <h3 class="title">Iguazu Falls</h3>
+                          </div>
+				  </div>
+					   <div class="col-lg-3  col-md-6 col-sm-6  col-6">
+                           <div class="travel-img">
+							 <div class="radio">
+							   <input type="radio"  name="radio"/>
+							   <img class="img-tick imgtick" src="static/img/tick.png"/>
+							   <img class="img-tick" src="img/notick.png"/>
+							 </div>
+                                 <img  src="img/location4.png"/>
+								  <h3 class="title">Manaus (Amazon)</h3>
+                          </div>
+				  </div>
+			  </div>
+			</div>
+	   <div class="footer-btns">
+		<input type="button" name="previous" class="previous action-button prev7" value="Previous" />
+			<input type="button" name="next" class="next action-button prev7" value="Next" />
+	</div>
+	</div>
+<div class="travel-step">
+<div class="headings-top">
+		   <h3>Customized experience. Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
+		<!--h2 class="fs-title">Question 9</h2-->
+		 <h3 class="fs-subtitle"><!--span>Q</span-->What type of hotel do you prefer?</h3>
+              <div class="questions-travel">
+            <div class="row">
+				   <div class="col-lg-3  col-md-6 col-sm-6  col-6">
+				    <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/eco1.png"/>
+								  <h3 class="title">Chic/Boutique</h3>
+                          </div>
+				  </div>
+				  <div class="col-lg-3  col-md-6 col-sm-6  col-6">
+                        <div class="travel-img">
+							 <div class="radio">
+							   <input type="radio"  name="radio"/>
+							   <img class="img-tick imgtick" src="static/img/tick.png"/>
+							   <img class="img-tick" src="img/notick.png"/>
+							 </div>
+                                 <img  src="img/cozy1.png"/>
+								  <h3 class="title">Cozy Bed & Breakfast</h3>
+                          </div>
+				  </div>
+					   <div class="col-lg-3  col-md-6 col-sm-6  col-6">
+                            <div class="travel-img">
+							 <div class="radio">
+							   <input type="radio"  name="radio"/>
+							   <img class="img-tick imgtick" src="static/img/tick.png"/>
+							   <img class="img-tick" src="img/notick.png"/>
+							 </div>
+                                 <img  src="img/upscale1.png"/>
+								  <h3 class="title">Upscale Resorts</h3>
+                          </div>
+				  </div>
+					   <div class="col-lg-3 col-md-6 col-sm-6  col-6">
+                           <div class="travel-img">
+							 <div class="radio">
+							   <input type="radio"  name="radio"/>
+							   <img class="img-tick imgtick" src="static/img/tick.png"/>
+							   <img class="img-tick" src="img/notick.png"/>
+							 </div>
+                                 <img  src="img/luxurious1.png"/>
+								  <h3 class="title">Luxury Private Home
+</h3>
+                          </div>
+				  </div>
+			  </div>
+			</div>
+
+<div class="footer-btns">
+		<input type="button" name="previous" class="previous action-button prev8" value="Previous" />
+		<input type="button" name="next" data-toggle="modal" data-target="#modal3" class=" action-button next8" value="Next" />
+
+	</div>
+	</div>
+	<!---div class="travel-step">
+		<div class="headings-top">
+		   <h3>Customized <strong>experience.</strong>  Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
+		<div class="questions-travel">
+            <div class="row">
+				  	  <div class="col-lg-6 col-md-6 col-sm-6">
+                           <div class="travel-map">
+					   <img  src="img/gmap.png"/>
+				  </div>
+				  </div>
+					  <div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="content-map text-center">
+<img src="img/other1.png"/>
+							<p>
+
+												Did you know that Brazil’s currency is called the “Real”?  Also, $1 USD = ~4.2 Reals (approx.)
+							</p>
+				  </div>
+				  </div>
+
+			  </div>
+			</div>
+
+		<input type="button" name="previous" class="previous action-button prev11" value="Previous" />
+		<input type="button" name="next" class="next action-button next11" value="Next" />
+
+	</div-->
+
+	<div class="travel-step">
+	<div class="headings-top">
+		   <h3>Customized experience. Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
+		<!--h2 class="fs-title">Question 10</h2-->
+		 <h3 class="fs-subtitle"><!--span>Q</span-->What is your total budget (excluding flights)?</h3>
+              <div class="questions-travel">
+            <div class="row">
+				   <div class="col-lg-3  col-md-6 col-sm-6  col-6">
+				    <div class="travel-img">
+						 <div class="radio">
+						   <input type="radio"  name="radio"/>
+						   <img class="img-tick imgtick" src="static/img/tick.png"/>
+						   <img class="img-tick" src="img/notick.png"/>
+						 </div>
+                                 <img  src="img/classic1.png"/>
+								  <h3 class="title">Classic (Under $2000)</h3>
+                          </div>
+				  </div>
+				  <div class="col-lg-3  col-md-6 col-sm-6  col-6">
+                        <div class="travel-img">
+							 <div class="radio">
+							   <input type="radio"  name="radio"/>
+							   <img class="img-tick imgtick" src="static/img/tick.png"/>
+							   <img class="img-tick" src="img/notick.png"/>
+							 </div>
+                                 <img  src="img/boutique1.png"/>
+								  <h3 class="title">Boutique ($2000-$3000)</h3>
+                          </div>
+				  </div>
+					   <div class="col-lg-3  col-md-6 col-sm-6  col-6">
+                            <div class="travel-img">
+							 <div class="radio">
+							   <input type="radio"  name="radio"/>
+							   <img class="img-tick imgtick" src="static/img/tick.png"/>
+							   <img class="img-tick" src="img/notick.png"/>
+							 </div>
+                                 <img  src="img/exclusive1.png"/>
+								  <h3 class="title">Exclusive ($3000-$5000)</h3>
+                          </div>
+				  </div>
+					   <div class="col-lg-3 col-md-6 col-sm-6  col-6">
+                           <div class="travel-img">
+							 <div class="radio">
+							   <input type="radio"  name="radio"/>
+							   <img class="img-tick imgtick" src="static/img/tick.png"/>
+							   <img class="img-tick" src="img/notick.png"/>
+							 </div>
+                                 <img  src="img/luxury1.png"/>
+								  <h3 class="title">Luxury  (Over $5000)</h3>
+                          </div>
+				  </div>
+			  </div>
+			</div>
+		<div class="footer-btns">
+
+		<input type="button" name="previous" class="previous action-button prev9" value="Previous" />
+			<input type="button" name="next" class="next action-button  next9" value="Next" />
+
+	</div>
 	</div>
 
-</form>
+	<div class="travel-step">
+		<div class="headings-top">
+		   <h3>Customized experience.  Just for you.</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
+		<!--h2 class="fs-title">Question 11</h2-->
+		 <h3 class="fs-subtitle"><!--span>Q</span-->Any additional information you’d like to tell us?</h3>
+              <div class="questions-travel">
+            <div class="row justify-content-center">
+			    <!--div class="col-lg-4 col-md-4 col-sm-12">
+			     <div class="travel-date">
+				   <img src="img/information.png"/>
+				 </div>
+			  </div-->
+				   <div class="col-lg-6  col-md-12 col-sm-12">
+				     <div class="form-group">
+					 <textarea maxlength="250" rows="6" class="form-control" placeholder="Any additional information..."></textarea>
+					 <!--span class="note-text">Please Enter Words Not More Than 250 word limit</span-->
+				  </div>
+
+
+				  </div>
+			  </div>
+			  </div>
+
+		<div class="footer-btns">
+
+		    <input type="button" name="previous" class="previous action-button prev10" value="Previous" />
+			<input type="button" name="next"  data-toggle="modal" data-target="#modal4" class="nexthide action-button next10" value="Next" />
+
+
+	</div>
+	</div>
+	<!---div class="travel-step">
+			<div class="headings-top">
+		   <h3>We’re creating your customized <strong>experience.</strong></h3>
+		   <h5>All based on the info you provided.</h5>
+		</div>
+		<div class="questions-travel">
+            <div class="row justify-content-center">
+				  	  <div class="col-lg-6 col-md-6 col-sm-6">
+                           <div class="travel-map">
+					   <img  src="img/gmap.png"/>
+				  </div>
+				  </div>
+
+			  </div>
+			</div>
+
+		<input type="button" name="previous" class="previous action-button prev11" value="Previous" />
+		<input type="button" name="next" class="next action-button next11" value="Next" />
+
+	</div-->
+	<div class="travel-step">
+	<div class="headings-top">
+		   <h3>We’ve created your perfect trip to Brazil!</h3>
+		   <h5>Tell us what you’re into and we’ll do the rest.</h5>
+		</div>
+		<!--h2 class="fs-title">Question 12</h2-->
+		<h3 class="fs-subtitle"><!--span>Q</span-->Where should we send your trip details?</h3>
+  <div class="questions-travel trip-detail">
+            <!--div class="row justify-content-center"-->
+            <div class="row justify-content-center">
+
+			    <div class="col-lg-6 col-md-10 col-sm-12">
+            <div class="row">
+			  <div class="col-lg-12 col-md-12 col-sm-12">
+			     <div class="form-group">
+					 <div class="input-group">
+					   <input type="text" class="form-control" placeholder="First Name"/>
+
+					 </div>
+				 </div>
+			  </div>
+			  <div class="col-lg-12 col-md-12 col-sm-12">
+		  <div class="form-group">
+					 <div class="input-group">
+					   <input type="text" class="form-control" placeholder="Last Name"/>
+
+					 </div>
+				 </div>
+				 </div>
+				   <div class="col-lg-12 col-md-12 col-sm-12">
+			     <div class="form-group">
+					 <div class="input-group">
+					   <input type="text" class="form-control"  placeholder="Email Address"/>
+
+					 </div>
+				 </div>
+			  </div>
+			  <div class="col-lg-12 col-md-12 col-sm-12">
+		              <div class="form-group">
+					 <div class="input-group">
+					   <input type="text" class="form-control"  placeholder="Phone Number"/>
+
+					 </div>
+				 </div>
+				 </div>
+				 	  <div class="col-lg-12 col-md-12 col-sm-12">
+				 <button type="button" class="next  btn-trip" >Next</button>
+				 </div>
+				 </div>
+			  </div>
+			  </div>
+			</div>
+		<!--input type="button" name="previous" class="previous action-button prev15" value="Previous" /-->
+
+	</div>
+	<div class="travel-step">
+		<div class="headings-top">
+		   <h3>We’re sending your  trip.  Check your inbox in a few.</h3>
+		   <h5>Our Brazil Travel Expert will call you shortly.</h5>
+		</div>
+		<div class="questions-travel">
+
+            <div class="row justify-content-center">
+				  	  <div class="col-lg-6 col-md-6 col-sm-6">
+					  <div class="thankyou text-center">
+					    <!--img src="static/img/tick.png"/-->
+					    <h5>Thank You.</h5>
+					  </div>
+                           <div class="travel-map travel-map1">
+					   <img  src="img/map11.png"/>
+				  </div>
+				  </div>
+
+			  </div>
+			</div>
+
+		<!--input type="button" name="previous" class="previous action-button prev16" value="Previous" />
+
+			<input type="submit" name="submit" class="submit action-button next16" value="Submit" /-->
+
+	</div>
+</div>
+<div class="progressbar">
+  <div class="row">
+  <div class="col-lg-2 hide-below text-center">
+     <h2>Your Journey Begins Here!</h2>
+  </div>
+  <div class="col-lg-8 col-md-12">
+	<ul id="progressbar">
+	<!-- <li data-target="0"  class="active d-none"> -->
+			<!-- <img class="rotate foot-fill" style="display:none" src="static/img/002-footprints-1.png"/><img class="rotate foot-unfill" src="static/img/001-footprints.png"/> -->
+		<!-- </li> -->
+		<li data-target="0"  class="active" style="display:none!important">
+			<img class="rotate foot-fill" style="display:none" src="static/img/002-footprints-1.png"/><img class="rotate foot-unfill" src="static/img/001-footprints.png"/>
+		</li>
+		<li data-target="0" >
+			<img class="rotate foot-fill" style="display:none" src="static/img/002-footprints-1.png"/><img class="rotate foot-unfill" src="static/img/001-footprints.png"/>
+		</li>
+		<li data-target="1">
+			<img class="rotate foot-fill" style="display:none" src="static/img/002-footprints-1.png"/><img class="rotate foot-unfill" src="static/img/001-footprints.png"/>
+		</li>
+		<li data-target="2"><img class="rotate foot-fill" style="display:none" src="static/img/002-footprints-1.png"/><img class="rotate foot-unfill" src="static/img/001-footprints.png"/></li>
+		<li data-target="3"><img class="rotate foot-fill" style="display:none" src="static/img/002-footprints-1.png"/><img class="rotate foot-unfill" src="static/img/001-footprints.png"/></li>
+		<li data-target="4"><img class="rotate foot-fill" style="display:none" src="static/img/002-footprints-1.png"/><img class="rotate foot-unfill" src="static/img/001-footprints.png"/></li>
+		<li data-target="5"><img class="rotate foot-fill" style="display:none" src="static/img/002-footprints-1.png"/><img class="rotate foot-unfill" src="static/img/001-footprints.png"/></li>
+		<li data-target="6"><img class="rotate foot-fill" style="display:none" src="static/img/002-footprints-1.png"/><img class="rotate foot-unfill" src="static/img/001-footprints.png"/></li>
+		<li data-target="7"><img class="rotate foot-fill" style="display:none" src="static/img/002-footprints-1.png"/><img class="rotate foot-unfill" src="static/img/001-footprints.png"/></li>
+	</ul>
+</div>
+  <div class="col-lg-2   hide-below text-center">
+    <h2>Take Off!</h2>
+  </div>
+</div>
+</div>
+</div>
 		   </div>
 	   </div>
    </section>
-   <footer class="footer">
+
+   <div class="modal fade " id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body ">   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+		<div class="questions-travel">
+        <div class="row">
+				  	  <div class="col-lg-6 col-md-6 col-sm-6">
+                           <div class="travel-map text-center">
+					   <img src="img/map11.png">
+				  </div>
+				  </div>
+					  <div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="content-map text-center">
+                                  <img src="img/other1.png">
+							<p>
+
+												Did you know the Amazon produces more than 20% of the world’s oxygen?
+							</p>
+				  </div>
+				  </div>
+
+			  </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary next">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade " id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body ">   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+		<div class="questions-travel">
+       <div class="row">
+				  	  <div class="col-lg-6 col-md-6 col-sm-6">
+                           <div class="travel-map text-center">
+					   <img  src="img/map11.png"/>
+				  </div>
+				  </div>
+					  <div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="content-map text-center">
+<img src="img/other1.png"/>
+							<p>
+
+												Did you know Brazil is the 5th largest country in the world with over 210 million inhabitants?
+							</p>
+				  </div>
+				  </div>
+
+			  </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary next">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade " id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body ">   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+		<div class="questions-travel">
+
+	     <div class="row">
+				  	  <div class="col-lg-6 col-md-6 col-sm-6">
+                           <div class="travel-map text-center">
+					   <img  src="img/map11.png"/>
+				  </div>
+				  </div>
+					  <div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="content-map text-center">
+<img src="img/other1.png"/>
+							<p>
+
+												Did you know that Brazil’s currency is called the “Real”?  Also, $1 USD = ~4.2 Reals (approx.)
+							</p>
+				  </div>
+				  </div>
+
+			  </div>
+
+
+
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary next">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade " id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body ">   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+		<div class="questions-travel">
+
+	     <div class="row justify-content-center">
+				  	  <div class="col-lg-10 col-md-12 col-sm-12">
+                           <div class="travel-map text-center">
+					   <img  src="img/map11.png"/>
+				  </div>
+				  </div>
+
+			  </div>
+
+
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary next">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+   <!--footer class="footer">
 	   <div class="container">
 		   <div class="row justify-content-center">
 		   <p>&copy; Copyright 2019 The Travelier. All Rights Reserved</p>
 		   </div>
 	   </div>
-   </footer>
+   </footer-->
     <script src="static/js/jquery-3.3.1.slim.min.js"></script>
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/popper.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.flagstrap.js"></script>
 	<script src="static/js/jquery.easing.min.js" type="text/javascript"></script>
-	<script  src="static/js/script.js"></script>
 	<script  src="static/js/main.js"></script>
+	<script  src="static/js/slick.js"></script>
+	<script  src="static/js/bootstrap-datepicker.js"></script>
+      <script src="static/js/select2.min.js"></script>
+	 <script>
+	 $(function() {
+  var $select = $('.select2');
 
+  $select.select2({
+    theme: 'paper'
+  });
+});
+	 </script>
   </body>
 </html>

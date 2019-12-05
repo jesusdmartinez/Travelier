@@ -28,7 +28,7 @@ class User(UserMixin, db.Model):
 
     @staticmethod
     def create_user(dict):
-        return User(first_name=dict['first_name'], last_name=dict['last_name'], email=dict['email'], phone_number=dict['phone_number'])
+        return User(first_name=dict['first_name'], last_name=dict['last_name'], email=dict['email'], phone_number=dict['phone_number'], password_hash=dict['password_hash'])
 
     def retrieve_users(self):
         return {

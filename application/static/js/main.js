@@ -1,90 +1,56 @@
 $(document).ready(function(){
-				$('.btn1').on('click', function(){
-				$('.btn1').removeClass('active')
-				$(this).addClass('active')
-				});
-				$('.btn2').on('click', function(){
-				$('.btn2').removeClass('active')
-				$(this).addClass('active')
-				});
-				$('.btn3').on('click', function(){
-				$('.btn3').removeClass('active')
-				$(this).addClass('active')
-				});
-				$('.btn4').on('click', function(){
-				$('.btn4').removeClass('active')
-				$(this).addClass('active')
-				});
-				$('.btn5').on('click', function(){
-				$('.btn5').removeClass('active')
-				$(this).addClass('active')
-				});
-				$('.btn6').on('click', function(){
-				$('.btn6').removeClass('active')
-				$(this).addClass('active')
-				});
-				$('.btn7').on('click', function(){
-				$('.btn7').removeClass('active')
-				$(this).addClass('active')
-				});
-				$('.btn8').on('click', function(){
-				$('.btn8').removeClass('active')
-				$(this).addClass('active')
-				});
-				$('.next1').on('click', function(){
-				$('.travel-bg').removeClass('travel1');
-				$('.travel-bg').addClass('travel2')
-				});
-				$('.prev2').on('click', function(){
-				$('.travel-bg').removeClass('travel2');
-				$('.travel-bg').addClass('travel1')
-				});
-				$('.next2').on('click', function(){
-				$('.travel-bg').removeClass('travel2');
-				$('.travel-bg').addClass('travel3')
-				});
-				$('.prev3').on('click', function(){
-				$('.travel-bg').removeClass('travel3');
-				$('.travel-bg').addClass('travel2')
-				});
-			    $('.next3').on('click', function(){
-				$('.travel-bg').removeClass('travel3');
-				$('.travel-bg').addClass('travel4')
-				});
-				$('.prev4').on('click', function(){
-				$('.travel-bg').removeClass('travel4');
-				$('.travel-bg').addClass('travel3')
-				});
-				  $('.next4').on('click', function(){
-				$('.travel-bg').removeClass('travel4');
-				$('.travel-bg').addClass('travel5')
-				});
-				$('.prev5').on('click', function(){
-				$('.travel-bg').removeClass('travel5');
-				$('.travel-bg').addClass('travel4')
-				});
-				  $('.next5').on('click', function(){
-				$('.travel-bg').removeClass('travel5');
-				$('.travel-bg').addClass('travel6')
-				});
-				$('.prev6').on('click', function(){
-				$('.travel-bg').removeClass('travel6');
-				$('.travel-bg').addClass('travel5')
-				});
-					  $('.next6').on('click', function(){
-				$('.travel-bg').removeClass('travel6');
-				$('.travel-bg').addClass('travel7')
-				});
-				$('.prev7').on('click', function(){
-				$('.travel-bg').removeClass('travel7');
-				$('.travel-bg').addClass('travel6')
-				});
-					  $('.next7').on('click', function(){
-				$('.travel-bg').removeClass('travel7');
-				$('.travel-bg').addClass('travel8')
-				});
-				$('.prev8').on('click', function(){
-				$('.travel-bg').removeClass('travel8');
-				$('.travel-bg').addClass('travel7')
-				});
+
+	$('.single-item').slick({
+		infinite: false,
+		slidesToShow: 1
+	});
+
+$(".next1").click(function(){
+    $(".slick-next ").click();
+    $("ul#progressbar li.active1 ").addClass("active");
+    return false;
+});
+
+$(".next").click(function(){
+    $(".slick-next ").click();
+	  //$(this).closest('ul#progressbar li.active').find('ul#progressbar li.active').addClass("prev_show");
+    $("ul#progressbar li.active + li").addClass("active");
+    return false;
+});
+$(".nexts").click(function(){
+    $(".slick-next ").click();
+    return false;
+});
+$(".previouss ").click(function(){
+    $(".slick-prev ").click();
+    return false;
+});
+$(".previous ").click(function(){
+    $(".slick-prev ").click();
+	var lastli = $('ul#progressbar li.active').length;
+	$( "ul#progressbar li:nth-child("+ lastli +")" ).removeClass('active' );
+
+    return false;
+});
+
+$(".nexthide ").click(function(){
+$(".progressbar").hide();
+});
+ $(".modal .btn.next").click(function(){
+        $(".modal").modal('hide');
+    });
+$('.datepicker').datepicker({});
+$(function(){
+    $('.selectpicker').flagStrap({
+    countries: {
+        "BR": "Brazil"
+    }
+});
+});
+ var $radioButtons = $('input[type="radio"]');
+$radioButtons.click(function() {
+    $radioButtons.each(function() {
+        $(this).parent().toggleClass('checked11', this.checked);
+    });
+});
 		});
