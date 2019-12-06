@@ -54,3 +54,14 @@ $radioButtons.click(function() {
     });
 });
 		});
+
+let user_info = [];
+
+const addUserInfo = (ev)=>{
+    ev.preventDefault();
+    let user_input = {
+    first_name: document.getElementById('title').value
+
+    }
+
+}
