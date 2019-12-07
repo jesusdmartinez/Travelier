@@ -1,4 +1,5 @@
-user_info = []
+user_answers = []
+user_data = []
 
 $(document).ready(function(){
 				
@@ -8,7 +9,7 @@ $(document).ready(function(){
 	});
   
 $(".next1").click(function(){
-    user_info.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
+    user_answers.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
     $(".slick-next ").click();
     $("ul#progressbar li.active1 ").addClass("active");
     return false;
@@ -21,35 +22,40 @@ $(".next1").click(function(){
 });
 
 $(".next2").click(function(){
-    user_info.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
+    user_answers.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
 });
 
 $(".next3").click(function(){
-    user_info.push(document.querySelector(".checked11").closest(".col-12").querySelector("h3.title").innerHTML);
+    user_answers.push(document.querySelector(".checked11").closest(".col-12").querySelector("h3.title").innerHTML);
 });
 
 $(".next5").click(function(){
-    user_info.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
+    user_answers.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
 });
 
 $(".next6").click(function(){
-    user_info.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
+    user_answers.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
 });
 
 $(".next7").click(function(){
-    user_info.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
+    user_answers.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
 });
 
 $(".next8").click(function(){
-    user_info.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
+    user_answers.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
 });
 
 $(".next9").click(function(){
-    user_info.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
+    user_answers.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
 });
 
 $(".next10").click(function(){
-    user_info.push(document.querySelectorAll(".form-control")[4].value);
+    user_answers.push(document.querySelectorAll(".form-control")[4].value);
+});
+
+$(".btn-trip").click(function(){
+    for (let i = 5; i < document.querySelectorAll('.form-control').length; i++) {
+  user_data.push(document.querySelectorAll('.form-control')[i].value)};
 });
 
 $(".next").click(function(){
