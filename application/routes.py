@@ -52,13 +52,21 @@ def login():
 
 
 
-
-
-
 # Get Started Page --> Sheet 1 of questionnaire
 @app.route('/get-started')
 def get_started():
     return render_template('get-started.html')
+
+@app.route('/get-started', methods=['POST'])
+def get_user_data():
+
+    first_name = request.json
+    # last_name = request.form['user_data[1]']
+    # email = request.form['user_data[2]']
+    # phone_number = request.form['user_data[3]']
+    print(f'RECEIVED: {request.json}')
+    return jsonify(first_name)
+
 
 
 # Brazil Page --> Page to display different trip options in brazil

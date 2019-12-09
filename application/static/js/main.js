@@ -50,6 +50,29 @@ $(".next10").click(function(){
 $(".btn-trip").click(function(){
     for (let i = 5; i < document.querySelectorAll('.form-control').length; i++) {
   user_data.push(document.querySelectorAll('.form-control')[i].value)};
+
+    fetch('/get-started', {
+    method: 'post',
+    headers: {
+            "Content-Type": "application/json; charset=utf-8",
+        },
+    body: JSON.stringify(user_data)
+  }).then(function(response) {
+    return response.json();
+  }).then(function(data) {
+    console.log(data)
+  });
+
+
+//    $.ajax({
+//    type: 'POST',
+//    url: '/get-started',
+//    data: JSON.stringify(user_data),
+//    dataType: 'json'
+//    }).done(function(data) {
+//    console.log(data)
+//    })
+
 });
 
 $(".next").click(function(){
