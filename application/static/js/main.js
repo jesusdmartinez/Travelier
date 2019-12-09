@@ -2,22 +2,16 @@ user_answers = []
 user_data = []
 
 $(document).ready(function(){
-				
+
 	$('.single-item').slick({
 		infinite: false,
 		slidesToShow: 1
 	});
-  
+
 $(".next1").click(function(){
     user_answers.push(document.querySelector(".checked11").closest(".col-6").querySelector("h3.title").innerHTML);
     $(".slick-next ").click();
     $("ul#progressbar li.active1 ").addClass("active");
-    return false;
-});
-
-
-$(".next1").click(function(){
-    ;
     return false;
 });
 
@@ -59,24 +53,24 @@ $(".btn-trip").click(function(){
 });
 
 $(".next").click(function(){
-    $(".slick-next ").click(); 
+    $(".slick-next ").click();
 	  //$(this).closest('ul#progressbar li.active').find('ul#progressbar li.active').addClass("prev_show");
     $("ul#progressbar li.active + li").addClass("active");
     return false;
 });
 $(".nexts").click(function(){
-    $(".slick-next ").click(); 
+    $(".slick-next ").click();
     return false;
 });
 $(".previouss ").click(function(){
-    $(".slick-prev ").click(); 
+    $(".slick-prev ").click();
     return false;
 });
 $(".previous ").click(function(){
-    $(".slick-prev ").click(); 	
-	var lastli = $('ul#progressbar li.active').length;	
+    $(".slick-prev ").click();
+	var lastli = $('ul#progressbar li.active').length;
 	$( "ul#progressbar li:nth-child("+ lastli +")" ).removeClass('active' );
-	
+
     return false;
 });
 
@@ -101,5 +95,3 @@ $radioButtons.click(function() {
     });
 });
 		});
-
-
