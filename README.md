@@ -20,6 +20,7 @@ Share local experiences.
 - Superior in-market exploring
 - Boots on the ground
 - Leverage technology
+- Customer Service
 
 # Unique Experiences?
 - Eco focused
@@ -43,3 +44,9 @@ Share local experiences.
 - Peru
 - Argentina
 - Costa Rica
+
+# Pivots
+- Marketplace for travel agents
+- Database of experiences
+- In market tech (chat bot)
+- Group travel
