@@ -6,9 +6,13 @@ Take people on once-in-a-lifetime journeys.
 Share local experiences.
 
 
-# Why?
-- Unique:  our experiences are one-of-a-kind
+# Why Us?
+1. Personalized Customer Service
+2. First hand experiences
+3. Safe and Secure
+
 - Safe:  experiences are tried and true
+- Unique:  our experiences are one-of-a-kind
 - Secure:  we are by your side 24/7
 - Convenient:  we do all the work from beginning to end
 - Simple:  use our online tool
