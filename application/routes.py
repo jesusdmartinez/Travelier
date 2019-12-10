@@ -60,12 +60,9 @@ def get_started():
 @app.route('/get-started', methods=['POST'])
 def get_user_data():
 
-    first_name = request.json
-    # last_name = request.form['user_data[1]']
-    # email = request.form['user_data[2]']
-    # phone_number = request.form['user_data[3]']
+    user_data_upload = request.json
     print(f'RECEIVED: {request.json}')
-    return jsonify(first_name)
+    return jsonify(user_data_upload)
 
 
 

@@ -51,12 +51,19 @@ $(".btn-trip").click(function(){
     for (let i = 5; i < document.querySelectorAll('.form-control').length; i++) {
   user_data.push(document.querySelectorAll('.form-control')[i].value)};
 
+    let user_data_upload = {
+    "first_name":user_data[0],
+    "last_name":user_data[1],
+    "email":user_data[2],
+    "phone_number":user_data[3]
+    };
+
     fetch('/get-started', {
     method: 'post',
     headers: {
             "Content-Type": "application/json; charset=utf-8",
         },
-    body: JSON.stringify(user_data)
+    body: JSON.stringify(user_data_upload)
   }).then(function(response) {
     return response.json();
   }).then(function(data) {
