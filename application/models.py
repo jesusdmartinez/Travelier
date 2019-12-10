@@ -40,35 +40,18 @@ class User(UserMixin, db.Model):
        }
 
 
-
 class Questions(db.Model):
     __tablename__ = 'questions'
-    question_id = db.Column(db.Integer, primary_key=True, nullable=False, autoincrement=True)
-    question = db.Column(db.String(250), nullable=False, unique=False)
-
-    @staticmethod
-    def create_question(dict):
-        return Questions(question=dict['question'])
-
-    def return_question(self):
-        return {
-            'question_id': self.question_id,
-           'question': self.question,
-       }
-
-
-
-class Answers(db.Model):
-    __tablename__ = 'answers'
     answer_id = db.Column(db.Integer, autoincrement=True, primary_key=True, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id', ondelete="SET NULL"))
-    question_id = db.Column(db.Integer, db.ForeignKey('questions.question_id', ondelete="SET NULL"))
+    question_id = db.Column(db.Integer, nullable=False, unique=False)
+    question = db.Column(db.String(250), nullable=False, unique=False)
     answer = db.Column(db.String(250), nullable=False, unique=False)
     answer_date = db.Column(db.DateTime, unique=False, nullable=False, default=datetime.utcnow)
 
     @staticmethod
-    def create_answer(dict):
-        return Answers(user_id=dict['user_id'], question_id=dict['question_id'], answer=dict['answer'])
+    def create_question_answer(dict):
+        return Answers(user_id=dict['user_id'], question_id=dict['question_id'], question=dict['question'], answer=dict['answer'])
 
     def return_answer(self):
         return {

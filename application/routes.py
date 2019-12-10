@@ -5,7 +5,7 @@ from flask_login import current_user, login_user
 from .users import NewUsersApi
 from .questions import NewQuestionApi
 
-from .models import Questions, User, Answers
+from .models import Questions, User
 from .forms import LoginForm
 
 from . import db
