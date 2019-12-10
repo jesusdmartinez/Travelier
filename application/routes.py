@@ -77,7 +77,7 @@ def get_user_data():
             q = Questions()
             q.user_id = m.user_id
             q.question_id = answer['question_id']
-            q.question = "How are you traveling"
+            q.question = answer['question']
             q.answer = answer['answer']
             db.session.add(q)
 

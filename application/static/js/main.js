@@ -68,14 +68,14 @@ $(".btn-trip").click(function(){
 
         let user_answers_upload = {
     "answers":[
-        {'question_id':0, 'answer':user_answers[0]},
-        {'question_id':1, 'answer':user_answers[1]},
-        {'question_id':2, 'answer':user_answers[2]},
-        {'question_id':3, 'answer':user_answers[3]},
-        {'question_id':4, 'answer':user_answers[4]},
-        {'question_id':5, 'answer':user_answers[5]},
-        {'question_id':6, 'answer':user_answers[6]},
-        {'question_id':7, 'answer':user_answers[7]}
+        {'question_id':0, 'answer':user_answers[0], 'question':"How are you traveling?"},
+        {'question_id':1, 'answer':user_answers[1], 'question':"What type of experience would you like?"},
+        {'question_id':2, 'answer':user_answers[2], 'question':"Have you purchased your flights?"},
+        {'question_id':3, 'answer':user_answers[3], 'question':"Great. When would you like to go?"},
+        {'question_id':4, 'answer':user_answers[4], 'question':"How long are you thinking?"},
+        {'question_id':5, 'answer':user_answers[5], 'question':"What type of hotel do you prefer?"},
+        {'question_id':6, 'answer':user_answers[6], 'question':"What is your total budget (excluding flights)?"},
+        {'question_id':7, 'answer':user_answers[7], 'question':"Any additional information you’d like to tell us?"}
     ],
     "first_name":user_answers[8],
     "last_name":user_answers[9],
