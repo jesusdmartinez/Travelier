@@ -1,5 +1,4 @@
 user_answers = []
-user_data = []
 
 $(document).ready(function(){
 
@@ -49,13 +48,39 @@ $(".next10").click(function(){
 
 $(".btn-trip").click(function(){
     for (let i = 5; i < document.querySelectorAll('.form-control').length; i++) {
-  user_data.push(document.querySelectorAll('.form-control')[i].value)};
+  user_answers.push(document.querySelectorAll('.form-control')[i].value)};
 
-    let user_data_upload = {
-    "first_name":user_data[0],
-    "last_name":user_data[1],
-    "email":user_data[2],
-    "phone_number":user_data[3]
+//        let user_answers_upload = {
+//    "1":user_answers[0],
+//    "2":user_answers[1],
+//    "3":user_answers[2],
+//    "4":user_answers[3],
+//    "5":user_answers[4],
+//    "6":user_answers[5],
+//    "7":user_answers[6],
+//    "8":user_answers[7],
+//    "first_name":user_answers[8],
+//    "last_name":user_answers[9],
+//    "email":user_answers[10],
+//    "phone_number":user_answers[11],
+//    };
+
+
+        let user_answers_upload = {
+    "answers":[
+        {'question_id':0, 'answer':user_answers[0]},
+        {'question_id':1, 'answer':user_answers[1]},
+        {'question_id':2, 'answer':user_answers[2]},
+        {'question_id':3, 'answer':user_answers[3]},
+        {'question_id':4, 'answer':user_answers[4]},
+        {'question_id':5, 'answer':user_answers[5]},
+        {'question_id':6, 'answer':user_answers[6]},
+        {'question_id':7, 'answer':user_answers[7]}
+    ],
+    "first_name":user_answers[8],
+    "last_name":user_answers[9],
+    "email":user_answers[10],
+    "phone_number":user_answers[11]
     };
 
     fetch('/get-started', {
@@ -63,49 +88,14 @@ $(".btn-trip").click(function(){
     headers: {
             "Content-Type": "application/json; charset=utf-8",
         },
-    body: JSON.stringify(user_data_upload)
+    body: JSON.stringify(user_answers_upload)
   }).then(function(response) {
     return response.json();
   }).then(function(data) {
     console.log(data)
   });
-
-/////////// Answers Upload /////////////
-
-  let user_answer_upload = {
-    "1":user_answers[0],
-    "2":user_answers[1],
-    "3":user_answers[2],
-    "4":user_answers[3],
-    "5":user_answers[4],
-    "6":user_answers[5],
-    "7":user_answers[6],
-    "8":user_answers[7],
-    };
-
-    fetch('/get-started', {
-    method: 'post',
-    headers: {
-            "Content-Type": "application/json; charset=utf-8",
-        },
-    body: JSON.stringify(user_answer_upload)
-  }).then(function(response) {
-    return response.json();
-  }).then(function(data) {
-    console.log(data)
-  });
-
-
-//    $.ajax({
-//    type: 'POST',
-//    url: '/get-started',
-//    data: JSON.stringify(user_data),
-//    dataType: 'json'
-//    }).done(function(data) {
-//    console.log(data)
-//    })
-
 });
+
 
 $(".next").click(function(){
     $(".slick-next ").click();
@@ -150,3 +140,6 @@ $radioButtons.click(function() {
     });
 });
 		});
+
+
+

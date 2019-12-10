@@ -51,12 +51,12 @@ class Questions(db.Model):
 
     @staticmethod
     def create_question_answer(dict):
-        return Answers(user_id=dict['user_id'], question_id=dict['question_id'], question=dict['question'], answer=dict['answer'])
+        return Questions(user_id=dict['user_id'], question_id=dict['question_id'], question=dict['question'], answer=dict['answer'])
 
-    def return_answer(self):
-        return {
-            'answer_id': self.answer_id,
-            'user_id': self.user_id,
-            'question_id': self.question_id,
-            'answer': self.answer,
-       }
+    # def return_answer(self):
+    #     return {
+    #         'answer_id': self.answer_id,
+    #         'user_id': self.user_id,
+    #         'question_id': self.question_id,
+    #         'answer': self.answer,
+    #    }
