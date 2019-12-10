@@ -70,6 +70,31 @@ $(".btn-trip").click(function(){
     console.log(data)
   });
 
+/////////// Answers Upload /////////////
+
+  let user_answers_upload = {
+    "How are you traveling?":user_answers[0],
+    "What type of experience would you like?":user_answers[1],
+    "Have you purchased your flights?":user_answers[2],
+    "Great. When would you like to go?":user_answers[3],
+    "How long are you thinking?":user_answers[4],
+    "What type of hotel do you prefer?":user_answers[5],
+    "What is your total budget (excluding flights)?":user_answers[6],
+    "Any additional information you’d like to tell us?":user_answers[7],
+    };
+
+    fetch('/get-started', {
+    method: 'post',
+    headers: {
+            "Content-Type": "application/json; charset=utf-8",
+        },
+    body: JSON.stringify(user_answers_upload)
+  }).then(function(response) {
+    return response.json();
+  }).then(function(data) {
+    console.log(data)
+  });
+
 
 //    $.ajax({
 //    type: 'POST',

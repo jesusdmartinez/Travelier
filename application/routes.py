@@ -57,12 +57,19 @@ def login():
 def get_started():
     return render_template('get-started.html')
 
+
 @app.route('/get-started', methods=['POST'])
 def get_user_data():
-
     user_data_upload = request.json
     print(f'RECEIVED: {request.json}')
     return jsonify(user_data_upload)
+
+
+@app.route('/get-started', methods=['POST'])
+def get_user_answer_data():
+    user_answer_upload = request.json
+    print(f'RECEIVED: {request.json}')
+    return jsonify(user_answer_upload)
 
 
 
