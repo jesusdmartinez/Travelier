@@ -16,16 +16,6 @@ class User(db.Model):
     signup_date = db.Column(db.DateTime, unique=False, nullable=False, default=datetime.utcnow)
     password_hash = db.Column(db.String(128))
 
-    def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
-
-    def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
-
-    @login.user_loader
-    def load_user(id):
-        return User.query.get(int(id))
-
     @staticmethod
     def create_user(dict):
         return User(first_name=dict['first_name'], last_name=dict['last_name'], email=dict['email'], phone_number=dict['phone_number'])
@@ -38,6 +28,16 @@ class User(db.Model):
            'email': self.email,
            'phone_number': self.phone_number,
        }
+
+    # def set_password(self, password):
+    #     self.password_hash = generate_password_hash(password)
+    #
+    # def check_password(self, password):
+    #     return check_password_hash(self.password_hash, password)
+    #
+    # @login.user_loader
+    # def load_user(id):
+    #     return User.query.get(int(id))
 
 
 class Questions(db.Model):
