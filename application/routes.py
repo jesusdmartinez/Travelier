@@ -60,16 +60,44 @@ def get_started():
 
 @app.route('/get-started', methods=['POST'])
 def get_user_data():
-    user_data_upload = request.json
-    print(f'RECEIVED: {request.json}')
+    try:
+        user_data_upload = request.json
+
+        m = User()
+        m.first_name = user_data_upload['first_name']
+        m.last_name = user_data_upload['last_name']
+        m.email = user_data_upload['email']
+        m.phone_number = user_data_upload['phone_number']
+
+        db.session.add(m)
+        db.session.commit()
+    except KeyError as e:
+        return jsonify(f'Missing key: {e.args[0]}'), 400
+
+
     return jsonify(user_data_upload)
 
 
-@app.route('/get-started', methods=['POST'])
-def get_user_answer_data():
-    user_answer_upload = request.json
-    print(f'RECEIVED: {request.json}')
-    return jsonify(user_answer_upload)
+    # try:
+    #     user_id = request.args['user_id']
+    #     request_data = request.get_json()
+    #     message_content = request_data.get["message_content"]
+    #     new_message = Messages(group_id=group_id, message_content=message_content, user_id=user_id)
+    # except KeyError as e:
+    #     return jsonify(f'Missing key: {e.args[0]}'), 400
+    #
+    # db.session.add(new_message)
+    # db.session.commit()
+    # return jsonify(), 200
+
+
+
+
+# @app.route('/get-started', methods=['POST'])
+# def get_user_answer_data():
+#     user_answer_upload = request.json
+#     print(f'RECEIVED: {request.json}')
+#     return jsonify(user_answer_upload)
 
 
 

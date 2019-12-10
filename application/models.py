@@ -5,14 +5,14 @@ from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
-class User(UserMixin, db.Model):
+class User(db.Model):
     __tablename__ = 'users'
     user_id = db.Column(db.Integer,
                    primary_key=True, autoincrement=True, nullable=False)
     first_name = db.Column(db.String(50), unique=False, nullable=False)
     last_name = db.Column(db.String(50), unique=False, nullable=False)
     email = db.Column(db.String(50), unique=True, nullable=False)
-    phone_number = db.Column(db.VARCHAR(11), unique=True, nullable=False)
+    phone_number = db.Column(db.VARCHAR(11), unique=False, nullable=False)
     signup_date = db.Column(db.DateTime, unique=False, nullable=False, default=datetime.utcnow)
     password_hash = db.Column(db.String(128))
 
@@ -28,7 +28,7 @@ class User(UserMixin, db.Model):
 
     @staticmethod
     def create_user(dict):
-        return User(first_name=dict['first_name'], last_name=dict['last_name'], email=dict['email'], phone_number=dict['phone_number'], password_hash=dict['password_hash'])
+        return User(first_name=dict['first_name'], last_name=dict['last_name'], email=dict['email'], phone_number=dict['phone_number'])
 
     def retrieve_users(self):
         return {
