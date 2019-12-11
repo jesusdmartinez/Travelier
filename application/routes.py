@@ -22,7 +22,7 @@ def home():
     posts = [
         {
             'author': {'username': 'Jonah'},
-            'body': 'I love Brazilian Women'
+            'body': 'I love Brazil'
         },
         {
             'author': {'username': 'Patrick'},
@@ -62,7 +62,6 @@ def get_started():
 def get_user_data():
     try:
         user_data_upload = request.json
-        print(f'Received: {user_data_upload}')
 
         m = User()
         m.first_name = user_data_upload['first_name']
@@ -71,7 +70,6 @@ def get_user_data():
         m.phone_number = user_data_upload['phone_number']
         db.session.add(m)
         db.session.commit()
-
 
         for answer in user_data_upload['answers']:
             q = Questions()
@@ -89,52 +87,12 @@ def get_user_data():
     return jsonify(user_data_upload)
 
 
-# a = Questions()
-# a.user_id = "1" # foreign key; should link to User table, how can i automate lookup?  maybe lookup by email?
-# a.question_id = "1"
-# a.question = "How are you traveling"
-# a.answer = user_data_upload['1']
-# db.session.add(a)
-# db.session.commit()
-
-
 
 @app.route('/get-started', methods=['POST'])
 def get_user_answer_data():
     user_answer_upload = request.json
     print(f'RECEIVED: {request.json}')
     return jsonify(user_answer_upload)
-
-
-
-
-
-
-
-
-
-
-# def get_answer_data():
-#     try:
-#         user_answer_upload = request.json
-#
-#         m = Questions()
-#         m.first_name = user_data_upload['first_name']
-#         m.last_name = user_data_upload['last_name']
-#         m.email = user_data_upload['email']
-#         m.phone_number = user_data_upload['phone_number']
-#
-#         db.session.add(m)
-#         db.session.commit()
-#     except KeyError as e:
-#         return jsonify(f'Missing key: {e.args[0]}'), 400
-#
-#     return jsonify(user_data_upload)
-
-
-
-
-
 
 
 

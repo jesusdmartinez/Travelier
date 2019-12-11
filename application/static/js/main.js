@@ -50,22 +50,6 @@ $(".btn-trip").click(function(){
     for (let i = 5; i < document.querySelectorAll('.form-control').length; i++) {
   user_answers.push(document.querySelectorAll('.form-control')[i].value)};
 
-//        let user_answers_upload = {
-//    "1":user_answers[0],
-//    "2":user_answers[1],
-//    "3":user_answers[2],
-//    "4":user_answers[3],
-//    "5":user_answers[4],
-//    "6":user_answers[5],
-//    "7":user_answers[6],
-//    "8":user_answers[7],
-//    "first_name":user_answers[8],
-//    "last_name":user_answers[9],
-//    "email":user_answers[10],
-//    "phone_number":user_answers[11],
-//    };
-
-
         let user_answers_upload = {
     "answers":[
         {'question_id':0, 'answer':user_answers[0], 'question':"How are you traveling?"},
