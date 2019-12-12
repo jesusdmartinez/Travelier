@@ -1,35 +1,23 @@
 import smtplib
 import secrets
-import os
+from email.message import EmailMessage
 
-with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
-    smtp.ehlo()
-    smtp.starttls()
-    smtp.ehlo()
+msg = EmailMessage()
+msg['Subject'] = "Your Itinerary from The Travelier"
+msg['From'] = secrets.EMAIL_ADDRESS
+msg['To'] = secrets.EMAIL_ADDRESS
+msg.set_content('Hi Jesus\n\nThank you for messsaging the Travlier.  We have put togther some ideas for your trip, please see here\nhttps://wetu.com/Itinerary/Landing/fbd37720-bfa2-4f05-8827-a9b0f8b46bf1')
 
+msg.add_alternative("""\
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 style="color:SlateGray;">This is an HTML Email!</h1>
+    </body>
+</html>
+""", subtype='html')
+
+with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
     smtp.login(secrets.EMAIL_ADDRESS, secrets.PASSWORD)
 
-    subject = "Grab dinner this weekend"
-    body = "How about dinner at 6pm this saturday?"
-    msg = f'Subject: {subject}\n\n{body}'
-
-    smtp.sendmail(secrets.EMAIL_ADDRESS, secrets.EMAIL_ADDRESS, msg)
-
-
-
-
-# def send_email(subject, msg):
-#     server = smtplib.SMTP('smtp.gmail.com', 587)
-#     server.ehlo()
-#     server.starttls()
-#     server.login('jesus.martinez@thetravelier.com', 'alwaystravel')
-#     message = 'Subject: {}\n\n{}'.format(subject, msg)
-#     server.sendmail('jesus.martinez@thetravelier.com', 'jesus.martinez@thetravelier.com', message)
-#     server.quit()
-#     print("Success, email sent")
-#
-#
-# Subject = "Test"
-# msg = "Hello"
-#
-# send_email(Subject, msg)
+    smtp.send_message(msg)
