@@ -3,7 +3,7 @@ import secrets
 from email.message import EmailMessage
 
 msg = EmailMessage()
-msg['Subject'] = "Your Itinerary from The Travelier"
+msg['Subject'] = "Your Trip to Brazil from The Travelier"
 msg['From'] = secrets.EMAIL_ADDRESS
 msg['To'] = secrets.EMAIL_ADDRESS
 msg.set_content('Hi Jesus\n\nThank you for messsaging the Travlier.  We have put togther some ideas for your trip, please see here\nhttps://wetu.com/Itinerary/Landing/fbd37720-bfa2-4f05-8827-a9b0f8b46bf1')
