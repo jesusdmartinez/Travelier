@@ -4,6 +4,7 @@ End to end personalized travel.  Focused on Latam, starting with Brazil.  Plane 
 # Purpose // Mission
 Take people on once-in-a-lifetime journeys.
 Share local experiences.
+Allow people to experience unique adventures.
 
 
 # Why Us?
